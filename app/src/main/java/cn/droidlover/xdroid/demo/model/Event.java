@@ -1,6 +1,6 @@
 package cn.droidlover.xdroid.demo.model;
 
-import cn.droidlover.xdroid.event.IBus;
+import cn.droidlover.xdroid.bus.IBus;
 
 /**
  * Created by wanglei on 2012/2/8.

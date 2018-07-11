@@ -10,7 +10,7 @@ import butterknife.OnClick;
 import cn.droidlover.xdroid.base.XActivity;
 import cn.droidlover.xdroid.demo.R;
 import cn.droidlover.xdroid.demo.model.Event;
-import cn.droidlover.xdroid.event.BusFactory;
+import cn.droidlover.xdroid.bus.BusFactory;
 import cn.droidlover.xdroidbase.router.Router;
 
 
@@ -26,8 +26,7 @@ public class AboutActivity extends XActivity {
     @Override
     public void initData(Bundle savedInstanceState) {
         initToolbar();
-
-        BusFactory.getBus().post(new Event.TestEvent("EventBus测试"));
+        BusFactory.getBus(BusFactory.BusType.EVENT_BUS).post(new Event.TestEvent("EventBus测试"));
     }
 
     private void initToolbar() {

@@ -3,7 +3,9 @@ apply from: "conf.gradle"
 
 buildscript {
     repositories {
-        jcenter()
+        maven {
+            url 'http://192.168.3.14:8081/repository/public/'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.1'
@@ -15,9 +17,25 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
-        maven { url "https://jitpack.io" }
+        maven {
+            url 'http://192.168.3.14:8081/repository/public/'
+        }
     }
+}
+
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex') ) {
+                details.useVersion "$supportlib_version"
+            }
+        }
+    }
+}
+
+ext {
+    supportlib_version = '25.0.0'
 }
 
 task clean(type: Delete) {

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import butterknife.BindView;
-import cn.droidlover.xdroid.base.SimpleRecAdapter;
 import cn.droidlover.xdroid.base.XLazyFragment;
 import cn.droidlover.xdroid.demo.R;
 import cn.droidlover.xdroid.demo.model.GankResults;

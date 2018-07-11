@@ -1,8 +1,6 @@
 package cn.droidlover.xdroid.demo.ui;
 
-import cn.droidlover.xdroid.base.SimpleRecAdapter;
 import cn.droidlover.xdroid.demo.adapter.GanhuoAdapter;
-import cn.droidlover.xdroid.demo.adapter.HomeAdapter;
 import cn.droidlover.xdroid.demo.model.GankResults;
 import cn.droidlover.xrecyclerview.RecyclerItemCallback;
 import cn.droidlover.xrecyclerview.XRecyclerView;

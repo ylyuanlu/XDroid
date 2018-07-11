@@ -3,11 +3,9 @@ package cn.droidlover.xdroid.demo.adapter;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
-import cn.droidlover.xdroid.base.SimpleRecAdapter;
 import cn.droidlover.xdroid.demo.R;
 import cn.droidlover.xdroid.demo.model.GankResults;
 import cn.droidlover.xdroid.kit.KnifeKit;
